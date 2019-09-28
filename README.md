@@ -3,6 +3,7 @@
 # MyApp
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.3.2.
+##
 ## 9-27-19
 Added Item Details, Cart, Checkout, Order Finalization pages.
 ##
@@ -13,6 +14,7 @@ Added 3 products, remove button, quantity form, and checkout button to Cart page
 Added forms for customer billing/shipping info and complete order button to Checkout page.
 ##
 Added conformation graphic to Order Finalization page.
+##
 ## 9-13-19
 Added home, product, and sign-in pages.
 ##
