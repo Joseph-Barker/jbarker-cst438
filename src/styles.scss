@@ -1,10 +1,10 @@
-@import url('https://fonts.googleapis.com/css?family=Nunito:400,700&display=swap');
+ @import url('https://fonts.googleapis.com/css?family=Nunito:400,700&display=swap');
 
 $primary: rgb(212, 23, 23);
 
 body {
     margin: 0;
-    font-family: 'Nunito', 'sans-serif';
+   font-family: 'Nunito', 'sans-serif'; 
     font-size: 18px;
 }
 
@@ -15,8 +15,7 @@ body {
 
 header {
     background: $primary;
-    padding: 1em 0;
-
+    padding: .8em 0;
     a {
         color: white;
         text-decoration: none;
@@ -35,6 +34,7 @@ header {
 
             li a {
                 padding: 1em;
+                font-size: 20px;
 
                 &:hover {
                     background: darken($primary, 10%);
@@ -44,8 +44,14 @@ header {
     }
 }
 
+#cartImg{
+    height: auto; 
+    width: 20px;
+}
+
 h1 {
     margin-top: 2em;
 }
 html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; } 
+

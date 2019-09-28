@@ -1,0 +1,59 @@
+.product-card {
+    //float: left;
+    max-width: 100px;
+    transition: none !important;
+    box-shadow: none !important;
+}
+th{
+    padding-right: 4em;
+}
+
+#prod {
+    padding-right: 10em    
+}
+#product-quantity{
+    width: 40px;
+}
+
+mat-card-subtitle{
+    color: black;
+    font-size: 18px;
+}
+
+* {
+    box-sizing: border-box;
+  }
+  
+  /* Create two equal columns that floats next to each other */
+  .item-column {
+    float: left;
+    width: 650px;
+    padding: 10px;
+    //height: 300px; /* Should be removed. Only for demonstration */
+  }
+  
+  /* Create two equal columns that floats next to each other */
+  .total-column {
+    float: left;
+    width: 350px;
+    padding: 10px;
+    background-color:#f2f2f2;
+    th{
+      font-size: 16px;
+    }
+    //height: 300px; /* Should be removed. Only for demonstration */
+  }
+
+  /* Clear floats after the columns */
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  
+  /* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+  @media screen and (max-width: 600px) {
+    .column {
+      width: 100%;
+    }
+}

@@ -1,47 +1,49 @@
-<div id="mainList">
-  <br/> 
-  <mat-list-item><mat-card class="product-card">
-    <mat-card-header>
-      <mat-card-title>Home Tool Kit</mat-card-title>
-    </mat-card-header>
-    <img mat-card-image src="assets/img/Home_Tool_Kit.jpg">
-    <mat-card-content>
-    </mat-card-content>
-    <mat-card-actions>
-      <button mat-raised-button color="primary">BUY</button>
-      <button mat-button>DETAILS</button>
-      </mat-card-actions>
-    </mat-card>
-  </mat-list-item>
-
-  <br/> 
-  <mat-list-item><mat-card class="product-card">
-    <mat-card-header>
-      <mat-card-title>Circular Saw</mat-card-title>
-    </mat-card-header>
-    <img mat-card-image src="assets/img/Circular_Saw.jpg">
-    <mat-card-content>
-    </mat-card-content>
-    <mat-card-actions>
-      <button mat-raised-button color="primary">BUY</button>
-      <button mat-button>DETAILS</button>
-      </mat-card-actions>
-    </mat-card>
-  </mat-list-item>
-  
-  <br/> 
-  <mat-list-item><mat-card class="product-card">
-    <mat-card-header>
-      <mat-card-title>Push Lawn Mower</mat-card-title>
-    </mat-card-header>
-    <img mat-card-image src="assets/img/Push_Lawn_Mower.jpg">
-    <mat-card-content>
-    </mat-card-content>
-    <mat-card-actions>
-      <button mat-raised-button color="primary">BUY</button>
-      <button mat-button>DETAILS</button>
-      </mat-card-actions>
-    </mat-card>
-  </mat-list-item> 
-  
-</div>  
+<h1>Products</h1>
+<br>
+<ul> 
+  <li>     
+    <mat-list-item><mat-card class="product-card">
+      <mat-card-header>
+        <mat-card-title>Homeowner's Tool Set</mat-card-title>
+      </mat-card-header>
+      <a routerLink="/item-details"><img mat-card-image src="assets/img/Home_Tool_Kit.jpg"></a>
+      <mat-card-content>
+      </mat-card-content>
+      <mat-card-actions>
+        <button mat-raised-button color="primary">Add to Cart</button>
+        <a routerLink="/item-details"><button mat-button>Details</button></a>
+        </mat-card-actions>
+      </mat-card>
+    </mat-list-item>
+  </li>
+  <li> 
+    <mat-list-item><mat-card class="product-card">
+      <mat-card-header>
+        <mat-card-title>Circular Saw</mat-card-title>
+      </mat-card-header>
+      <a routerLink="/item-details"><img mat-card-image src="assets/img/Circular_Saw.jpg"></a>
+      <mat-card-content>
+      </mat-card-content>
+      <mat-card-actions>
+        <button mat-raised-button color="primary">Add to Cart</button>
+        <a routerLink="/item-details"><button mat-button>Details</button></a>
+        </mat-card-actions>
+      </mat-card>
+    </mat-list-item>
+  </li>
+  <li>
+    <mat-list-item><mat-card class="product-card">
+      <mat-card-header>
+        <mat-card-title>Push Lawn Mower</mat-card-title>
+      </mat-card-header>
+      <a routerLink="/item-details"><img mat-card-image src="assets/img/Push_Lawn_Mower.jpg"></a>
+      <mat-card-content>
+      </mat-card-content>
+      <mat-card-actions>
+        <button mat-raised-button color="primary">Add to Cart</button>
+        <a routerLink="/item-details"><button mat-button>Details</button></a>
+        </mat-card-actions>
+      </mat-card>
+    </mat-list-item> 
+  </li>
+</ul> 

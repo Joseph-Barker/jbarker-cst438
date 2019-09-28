@@ -12,4 +12,8 @@ export class ProductListComponent implements OnInit {
   ngOnInit() {
   }
 
+  routDetails() { 
+    
+  }
+
 }

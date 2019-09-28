@@ -1,0 +1,112 @@
+<body>
+    <h1>Checkout</h1>
+    <br/>
+    <mat-horizontal-stepper linear >
+
+        <mat-step label="Shipping" completed = true>
+            <div class="order-form">
+                <h2>Shipping Details</h2>
+                <mat-divider></mat-divider>
+                <br>                
+                <table>
+                    <tr>
+                        <th>
+                            <mat-form-field>
+                                <input matInput placeholder="First Name" value="">
+                            </mat-form-field>
+                        </th>
+                        <th> 
+                            <mat-form-field>
+                                <input matInput placeholder="Last Name" value="">
+                            </mat-form-field>
+                        </th>                  
+                    </tr>
+                    <tr>
+                        <th>
+                            <mat-form-field>
+                                <input matInput placeholder="Shipping Address" value="">
+                            </mat-form-field>                            
+                        </th>
+                    </tr>
+                    <tr>
+                        <th>
+                            <mat-form-field>
+                                <input matInput placeholder="ZIP Code" value="">
+                            </mat-form-field>                            
+                        </th>
+                    </tr>                                       
+                </table>
+                <button mat-raised-button color="primary" matStepperNext>Next</button>
+            </div>
+        </mat-step>
+        <mat-step label="Payment" completed = true>
+            <div class="order-form">
+                <h2>Payment Details</h2>
+                <mat-divider></mat-divider>
+                <br>
+                <table>
+                    <tr>
+                        <th>
+                            <mat-form-field>
+                                <input matInput placeholder="Enter credit card number" value="">
+                            </mat-form-field>
+                        </th>                  
+                    </tr>
+                    <h6>Expiration</h6>
+                    <tr>
+                        <th>
+                            <mat-form-field>
+                                <input matInput placeholder="Month" value="">
+                            </mat-form-field>
+                        </th>
+                        <th> 
+                            <mat-form-field>
+                                <input matInput placeholder="Year" value="">
+                            </mat-form-field>
+                        </th>
+                    </tr>
+                    <tr>
+                        <th>
+                            <mat-form-field>
+                                <input matInput placeholder="CVV (on back)" value="">
+                            </mat-form-field>                            
+                        </th>
+                    </tr>                                       
+                </table>                
+                <button mat-raised-button matStepperPrevious>Back</button>
+                <button mat-raised-button color="primary" matStepperNext>Next</button>
+            </div>
+        </mat-step> 
+        <mat-step label="Place Order" completed = true> 
+            <p></p>
+            <div class="order-form">
+                <h2>Order Details</h2>
+                <mat-divider></mat-divider>
+                <br>
+                <table>
+                <tr>
+                    <th>Subtotal</th>
+                    <th> ?? </th>                  
+                </tr>
+                <tr>
+                    <th>Shipping</th>
+                    <th>??</th>
+                </tr>
+                <tr>
+                <th>Sales Tax</th>
+                    <th>10%</th>
+                </tr>
+                <br>
+                <mat-divider></mat-divider>
+                <br>
+                <tr>
+                    <th><h2>Total</h2></th>
+                    <th>??</th>
+                </tr>
+                </table>                                
+                <button mat-raised-button matStepperPrevious>Back</button>
+                <a routerLink="/order-final"><button mat-raised-button color="primary">Place Order</button></a>           
+            </div>
+        </mat-step>     
+    </mat-horizontal-stepper>
+</body>

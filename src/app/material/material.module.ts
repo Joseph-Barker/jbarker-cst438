@@ -7,6 +7,7 @@ import {MatIconModule} from '@angular/material/icon';
 import {MatDividerModule} from '@angular/material/divider';
 import {MatListModule} from '@angular/material/list';
 import {MatCardModule} from '@angular/material/card';
+import {MatStepperModule} from '@angular/material/stepper';
 
 const MaterialComponents = [
   MatButtonModule,
@@ -16,25 +17,12 @@ const MaterialComponents = [
   MatIconModule,
   MatDividerModule,
   MatListModule,
-  MatCardModule
+  MatCardModule,
+  MatStepperModule
 ];
 
 @NgModule({
-  imports: [MatButtonModule,
-            MatGridListModule,
-            MatInputModule,
-            MatFormFieldModule,
-            MatIconModule,
-            MatDividerModule,
-            MatListModule,
-            MatCardModule],
-  exports: [MatButtonModule,
-            MatGridListModule,
-            MatInputModule,
-            MatFormFieldModule,
-            MatIconModule,
-            MatDividerModule,
-            MatListModule,
-            MatCardModule]
+  imports: [MaterialComponents],
+  exports: [MaterialComponents]
 })
 export class MaterialModule { }

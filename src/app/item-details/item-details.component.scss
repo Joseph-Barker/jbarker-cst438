@@ -1,0 +1,43 @@
+.product-card {
+    float: left;
+    max-width: 600px;
+    transition: none !important;
+    box-shadow: none !important;
+  }
+
+  /* Create two equal columns that floats next to each other */
+.column {
+    float: left;
+    width: 30%;
+    padding: 30px;
+    height: 200px;  
+    line-height: 1.6;
+  }
+  
+  /* Clear floats after the columns */
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  
+  /* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+  @media screen and (max-width: 600px) {
+    .column {
+      width: 100%;
+    }
+}
+
+#product-price{
+    font-size: 50px;
+}
+sup{
+    font-size: 25px;
+}
+h1{
+  text-align: left;
+}
+h4{
+  text-align: left;
+  color: #3F51B5;
+}
