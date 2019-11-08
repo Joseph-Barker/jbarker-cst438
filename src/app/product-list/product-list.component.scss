@@ -1,9 +1,24 @@
+#header{
+    //background: rgb(238, 238, 238); 
+    height: 100px;   
+}
+
+#catSelector{
+    //background: rgb(238, 238, 238);
+    height: 0x;
+}
+
 #mainList{
     float: left;    
 }
 
 .product-card {
     max-width: 400px;
+    min-width: 125px;
+}
+
+.productName {
+    font-size: 1.2rem;
 }
 
 ul {
@@ -18,7 +33,8 @@ ul {
         padding: 1em;
         margin-right: 10px;
         width: 20%;
-        height: 380px;
+        height: 480px;
+        min-width: 250px;
         margin-bottom: 1em;
         display: flex;
         flex-direction: column;
@@ -27,14 +43,20 @@ ul {
             margin: 0;
         }
 
-        p.name {
+        p.price {
             font-weight: bold;
-            font-size: 1.2rem;
+            font-size: 1.4rem;
         }
+
         p.country {
             text-transform: uppercase;
             font-size: .9rem;
             flex-grow: 1;
         }
     }
+}
+
+sup {
+    font-weight: bold;
+    font-size: 0.8rem;
 }

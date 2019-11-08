@@ -2,12 +2,20 @@
 <div>
     <br/>
     <div class="sign-in-container">
-        <mat-form-field>
-          <input matInput placeholder="Enter your Username" value="">
+      <div class="test" [ngClass]="setClasses()">
+        <ng-template [ngIf]="validSignIn && submit">
+          <span >welcome admin!</span>
+        </ng-template> 
+        <ng-template [ngIf]="!validSignIn && submit">
+          <span >We're sorry, your username and password combination did not match. Please reset your password or create a new account.</span>
+        </ng-template>        
+      </div>  
+      <mat-form-field>
+          <input matInput placeholder="Enter your Username" value="" [(ngModel)]="usernameInput" >
         </mat-form-field>       
         
         <mat-form-field>
-          <input matInput placeholder="Enter your password" [type]="hide ? 'text' : 'password'">
+          <input matInput placeholder="Enter your password" [type]="hide ? 'text' : 'password'" [(ngModel)]="passwordInput">
           <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
           <mat-icon>{{hide ? 'visibility' : 'visibility_off'}}</mat-icon>
           </button>       
@@ -15,7 +23,7 @@
     </div>
     <br/>
     <div class="submit-button">  
-        <button mat-raised-button color="primary">Sign In</button>
+        <button mat-raised-button color="primary" (click)="signInClick()">Sign In</button>
     </div>
     <br/>
 </div>

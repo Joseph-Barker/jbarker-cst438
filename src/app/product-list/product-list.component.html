@@ -1,49 +1,38 @@
-<h1>Products</h1>
-<br>
-<ul> 
-  <li>     
+<table>
+  <tr>
+    <th id="heading">
+      <h1 id="header">Products /</h1>
+    </th>
+    <th id="catSelector">
+      <mat-form-field>
+        <mat-label>Select a Category</mat-label>
+        <mat-select [(value)]="selected">
+          <mat-option *ngFor="let category of categories" [value]="category" (click)="catClick(category)" >{{ category }}</mat-option>
+        </mat-select>
+      </mat-form-field>     
+    </th>
+  </tr>
+</table>   
+<br/>
+<ul *ngIf="products">
+  <li *ngFor="let product of products">
     <mat-list-item><mat-card class="product-card">
       <mat-card-header>
-        <mat-card-title>Homeowner's Tool Set</mat-card-title>
+        <mat-card-title></mat-card-title>
       </mat-card-header>
-      <a routerLink="/item-details"><img mat-card-image src="assets/img/Home_Tool_Kit.jpg"></a>
+      <a routerLink="/item-details" (click)="detailsClick(product.id)"><img mat-card-image src="{{ product.imageURL }}"></a>
       <mat-card-content>
+        <p class="productName">{{ product.name }}</p>
+        <br/>
+        <p class="price"> 
+          <sup>$</sup>{{ product.price.toFixed(0) }}<sup>{{ ('0' + (product.price % 1 * 100).toFixed(0)).slice(-2) }}</sup>
+        </p>
       </mat-card-content>
       <mat-card-actions>
         <button mat-raised-button color="primary">Add to Cart</button>
-        <a routerLink="/item-details"><button mat-button>Details</button></a>
-        </mat-card-actions>
-      </mat-card>
-    </mat-list-item>
-  </li>
-  <li> 
-    <mat-list-item><mat-card class="product-card">
-      <mat-card-header>
-        <mat-card-title>Circular Saw</mat-card-title>
-      </mat-card-header>
-      <a routerLink="/item-details"><img mat-card-image src="assets/img/Circular_Saw.jpg"></a>
-      <mat-card-content>
-      </mat-card-content>
-      <mat-card-actions>
-        <button mat-raised-button color="primary">Add to Cart</button>
-        <a routerLink="/item-details"><button mat-button>Details</button></a>
-        </mat-card-actions>
-      </mat-card>
-    </mat-list-item>
-  </li>
-  <li>
-    <mat-list-item><mat-card class="product-card">
-      <mat-card-header>
-        <mat-card-title>Push Lawn Mower</mat-card-title>
-      </mat-card-header>
-      <a routerLink="/item-details"><img mat-card-image src="assets/img/Push_Lawn_Mower.jpg"></a>
-      <mat-card-content>
-      </mat-card-content>
-      <mat-card-actions>
-        <button mat-raised-button color="primary">Add to Cart</button>
-        <a routerLink="/item-details"><button mat-button>Details</button></a>
-        </mat-card-actions>
+        <a routerLink="/item-details"><button mat-button (click)="detailsClick(product.id)">Details</button></a>
+      </mat-card-actions>
       </mat-card>
     </mat-list-item> 
   </li>
-</ul> 
+</ul>

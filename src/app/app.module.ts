@@ -2,6 +2,9 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
 import { MaterialModule } from './material/material.module';
+import { FormsModule } from '@angular/forms';
+import { CarouselModule } from 'ngx-owl-carousel-o';
+import { AngularResizedEventModule } from 'angular-resize-event';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -13,6 +16,7 @@ import { CartComponent } from './cart/cart.component';
 import { ItemDetailsComponent } from './item-details/item-details.component';
 import { OrderFinalComponent } from './order-final/order-final.component';
 import { CheckoutComponent } from './checkout/checkout.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -29,7 +33,11 @@ import { CheckoutComponent } from './checkout/checkout.component';
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    MaterialModule
+    MaterialModule,
+    FormsModule,
+    CarouselModule,
+    AngularResizedEventModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

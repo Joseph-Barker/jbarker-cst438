@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { ResizedEvent } from 'angular-resize-event';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +8,11 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'my-app';
+  width: number;
+  height: number;
+ 
+  onResized(event: ResizedEvent) {
+    this.width = event.newWidth;
+    this.height = event.newHeight;
+  }
 }

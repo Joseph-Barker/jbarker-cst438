@@ -1,16 +1,29 @@
 <header>
-  <div class="container">
+  <div class="container" (resized)="onResized($event)">
     <a routerLink="/" class="logo">
       <img src="assets/img/AH_logo.png" height="120" width="120">
     </a>
-    <nav>
-      <ul>
-        <li><a routerLink="/">Home</a></li>
-        <li><a routerLink="/product-list">Products</a></li>
-        <li><a routerLink="/sign-in">Sign In</a></li>
-        <li><a routerLink="/cart">Cart | <img src="assets/img/cart.png" height="15" width="18"></a></li>
-      </ul>
-    </nav>
+    <ng-template [ngIf]= "width > 590" [ngIfElse]="none">
+      <nav>      
+        <ul>
+          <li><a routerLink="/">Home</a></li>
+          <li><a routerLink="/product-list">Products</a></li>
+          <li><a routerLink="/sign-in">Sign In</a></li>
+          <li><a routerLink="/cart">Cart | <img src="assets/img/cart.png" height="15" width="18"></a></li>
+        </ul>
+      </nav>
+    </ng-template>
+    <ng-template #none>
+        <button mat-icon-button [matMenuTriggerFor]="menu" aria-label="icon-button with a menu" id="burger">
+          <mat-icon><img src="assets/img/burger_icon.png" height="30" width="40"></mat-icon>
+        </button>
+        <mat-menu #menu="matMenu">
+          <button mat-menu-item><a routerLink="/">Home</a></button>
+          <button mat-menu-item><a routerLink="/product-list">Products</a></button>
+          <button mat-menu-item><a routerLink="/sign-in">Sign In</a></button>
+          <button mat-menu-item><a routerLink="/cart">Cart</a></button>
+        </mat-menu>
+    </ng-template>
   </div>
 </header>
 

@@ -1,7 +1,170 @@
-<div id="welcome">
-    <h1>Welcome!</h1>
+<div style="text-align:center">
+    <owl-carousel-o [options]="customOptions">
+      <ng-template carouselSlide>
+        <img src="assets/img/ahw1.png">
+      </ng-template>  
+      <ng-template carouselSlide>
+        <img src="assets/img/ahw2.png">
+      </ng-template>  
+      <ng-template carouselSlide>
+        <img src="assets/img/ahw3.png">
+      </ng-template> 
+      <ng-template carouselSlide>
+        <img src="assets/img/ahw4.png">
+      </ng-template>  
+      <ng-template carouselSlide>
+        <img src="assets/img/ahw5.png">
+      </ng-template>  
+    </owl-carousel-o>
 </div>
-
 <div class="main-container">
-    <img src="assets/img/Background.png">
+  <h1>Shop By Category</h1>
+  <mat-divider></mat-divider>
+  <br/>
+  <ul>
+    <li>
+        <mat-list-item>
+          <mat-card class="category-card">
+              <a routerLink="/product-list" (click)="catClick('Appliances')"><img mat-card-image src="assets/img/Icons/Appliances.png"></a>
+          </mat-card>
+        </mat-list-item>
+        <p class="catDescriptor">Appliances</p>   
+    </li>
+    <li>
+        <mat-list-item>
+          <mat-card class="category-card">
+              <a routerLink="/product-list" (click)="catClick('Bath & Faucets')"><img mat-card-image src="assets/img/Icons/Bath & Faucets.png"></a>
+          </mat-card>
+        </mat-list-item>
+        <p class="catDescriptor">Bath & Faucets</p>   
+    </li>
+    <li>
+        <mat-list-item>
+          <mat-card class="category-card">
+              <a routerLink="/product-list" (click)="catClick('Blinds & Window Treatments')"><img mat-card-image src="assets/img/Icons/Blinds & Window Treatments.png"></a>
+          </mat-card>
+        </mat-list-item>
+        <p class="catDescriptor">Blinds & Window Treatments</p>   
+    </li>
+    <li>
+        <mat-list-item>
+          <mat-card class="category-card">
+              <a routerLink="/product-list" (click)="catClick('Building Materials')"><img mat-card-image src="assets/img/Icons/Building Materials.png"></a>
+          </mat-card>
+        </mat-list-item>
+        <p class="catDescriptor">Building Materials</p>   
+    </li>
+    <li>
+        <mat-list-item>
+          <mat-card class="category-card">
+              <a routerLink="/product-list" (click)="catClick('Decor & Furniture')"><img mat-card-image src="assets/img/Icons/Decor & Furniture.png"></a>
+          </mat-card>
+        </mat-list-item>
+        <p class="catDescriptor">Decor & Furniture</p>   
+    </li>
+    <li>
+        <mat-list-item>
+          <mat-card class="category-card">
+              <a routerLink="/product-list" (click)="catClick('Doors & Windows')"><img mat-card-image src="assets/img/Icons/Doors & Windows.png"></a>
+          </mat-card>
+        </mat-list-item>
+        <p class="catDescriptor">Doors & Windows</p>   
+    </li>
+    <li>
+        <mat-list-item>
+          <mat-card class="category-card">
+              <a routerLink="/product-list" (click)="catClick('Electrical')"><img mat-card-image src="assets/img/Icons/Electrical.png"></a>
+          </mat-card>
+        </mat-list-item>
+        <p class="catDescriptor">Electrical</p>   
+    </li>    
+    <li>
+        <mat-list-item>
+          <mat-card class="category-card">
+              <a routerLink="/product-list" (click)="catClick('Flooring & Area Rugs')"><img mat-card-image src="assets/img/Icons/Flooring & Area Rugs.png"></a>
+          </mat-card>
+        </mat-list-item>
+        <p class="catDescriptor">Flooring & Area Rugs</p>   
+    </li>
+    <li>
+        <mat-list-item>
+          <mat-card class="category-card">
+              <a routerLink="/product-list" (click)="catClick('Hardware')"><img mat-card-image src="assets/img/Icons/Hardware.png"></a>
+          </mat-card>
+        </mat-list-item>
+        <p class="catDescriptor">Hardware</p>   
+    </li>
+    <li>
+        <mat-list-item>
+          <mat-card class="category-card">
+              <a routerLink="/product-list" (click)="catClick('Heating & Cooling')"><img mat-card-image src="assets/img/Icons/Heating & Cooling.png"></a>
+          </mat-card>
+        </mat-list-item>
+        <p class="catDescriptor">Heating & Cooling</p>   
+    </li>
+    <li>
+        <mat-list-item>
+          <mat-card class="category-card">
+              <a routerLink="/product-list" (click)="catClick('Kitchen')"><img mat-card-image src="assets/img/Icons/Kitchen.png"></a>
+          </mat-card>
+        </mat-list-item>
+        <p class="catDescriptor">Kitchen</p>   
+    </li>
+    <li>
+        <mat-list-item>
+          <mat-card class="category-card">
+              <a routerLink="/product-list" (click)="catClick('Lawn & Garden')"><img mat-card-image src="assets/img/Icons/Lawn & Garden.png"></a>
+          </mat-card>
+        </mat-list-item>
+        <p class="catDescriptor">Lawn & Garden</p>   
+    </li>
+    <li>
+        <mat-list-item>
+          <mat-card class="category-card">
+              <a routerLink="/product-list" (click)="catClick('Lighting & Ceiling Fans')"><img mat-card-image src="assets/img/Icons/Lighting & Celling Fans.png"></a>
+          </mat-card>
+        </mat-list-item>
+        <p class="catDescriptor">Lighting & Ceiling Fans</p>   
+    </li>    
+    <li>
+        <mat-list-item>
+          <mat-card class="category-card">
+              <a routerLink="/product-list" (click)="catClick('Outdoor Living')"><img mat-card-image src="assets/img/Icons/Outdoor Living.png"></a>
+          </mat-card>
+        </mat-list-item>
+        <p class="catDescriptor">Outdoor Living</p>   
+    </li>
+    <li>
+        <mat-list-item>
+          <mat-card class="category-card">
+              <a routerLink="/product-list" (click)="catClick('Paint')"><img mat-card-image src="assets/img/Icons/Paint.png"></a>
+          </mat-card>
+        </mat-list-item>
+        <p class="catDescriptor">Paint</p>   
+    </li>
+    <li>
+        <mat-list-item>
+          <mat-card class="category-card">
+              <a routerLink="/product-list" (click)="catClick('Plumbing')"><img mat-card-image src="assets/img/Icons/Plumbing.png"></a>
+          </mat-card>
+        </mat-list-item>
+        <p class="catDescriptor">Plumbing</p>   
+    </li>
+    <li>
+        <mat-list-item>
+          <mat-card class="category-card">
+              <a routerLink="/product-list" (click)="catClick('Storage & Organization')"><img mat-card-image src="assets/img/Icons/Storage & Organization.png"></a>
+          </mat-card>
+        </mat-list-item>
+        <p class="catDescriptor">Storage & Organization</p>   
+    </li>
+    <li>
+        <mat-list-item>
+          <mat-card class="category-card">
+              <a routerLink="/product-list" (click)="catClick('Tools')"><img mat-card-image src="assets/img/Icons/Tools.png"></a>
+          </mat-card>
+        </mat-list-item>
+        <p class="catDescriptor">Tools</p>   
+    </li>                                                                        
+  </ul>
 </div>
