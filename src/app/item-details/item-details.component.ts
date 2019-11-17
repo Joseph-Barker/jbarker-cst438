@@ -13,9 +13,15 @@ export class ItemDetailsComponent implements OnInit {
   constructor(private _http: HttpService, private service: ProductService) { }
 
   ngOnInit() {
-    this._http.getProductById(this.service.getProductId()).subscribe(data => {
-      this.product = data;
-    });  
+    if (localStorage.getItem('product') === null) {
+      this._http.getProductById(this.service.getProductId()).subscribe(data => {
+        this.product = data;
+      });  
+    } else {
+      this._http.getProductById(JSON.parse(localStorage.getItem('product'))).subscribe(data => {
+        this.product = data;
+      });       
+    }
   }
 
 }

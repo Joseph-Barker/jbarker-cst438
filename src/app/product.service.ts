@@ -1,12 +1,14 @@
 import { Injectable, EventEmitter } from '@angular/core';
+import { BehaviorSubject } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
 })
 export class ProductService {
   $product = new EventEmitter();
-  ID: string = "";
-  Category: string = "All Categories" //All Categories
+  private ID: string = "";
+  private Category: string = "All Categories"
+  
   constructor() { }
 
   getProductId() {
@@ -15,6 +17,10 @@ export class ProductService {
   
   setProductId(ID: string) {
     this.ID = ID;
+    localStorage.setItem(
+      'product',
+      JSON.stringify(this.ID)
+    );
   }
 
   getCategory() {
@@ -24,4 +30,5 @@ export class ProductService {
   setCategory(Category: string) {
     this.Category = Category;
   }
+
 }

@@ -17,6 +17,8 @@ import { ItemDetailsComponent } from './item-details/item-details.component';
 import { OrderFinalComponent } from './order-final/order-final.component';
 import { CheckoutComponent } from './checkout/checkout.component';
 import { HttpClientModule } from '@angular/common/http';
+import { HttpService } from './http.service';
+import { ProductService } from './product.service';
 
 @NgModule({
   declarations: [
@@ -39,7 +41,9 @@ import { HttpClientModule } from '@angular/common/http';
     AngularResizedEventModule,
     HttpClientModule
   ],
-  providers: [],
+  providers: [HttpService,
+              ProductService 
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

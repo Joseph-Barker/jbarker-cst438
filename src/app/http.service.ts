@@ -18,4 +18,10 @@ export class HttpService {
   getProductByCat(Category: string) {
     return this.http.get('http://localhost:8081/products/category/' + Category);
   }
+
+
+  getCartByEmail(Email: string) {
+    return this.http.get('http://localhost:8081/user/cart/{email}?email=' + Email);
+  }
+
 }

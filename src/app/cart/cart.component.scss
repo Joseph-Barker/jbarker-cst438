@@ -1,23 +1,47 @@
+table {
+  width: 100%;
+  min-width: 400px;
+}
 .product-card {
     //float: left;
-    max-width: 100px;
+    width: 50%;
+    max-width: 175px;
     transition: none !important;
     box-shadow: none !important;
-}
-th{
-    padding-right: 4em;
+} 
+
+.product-th{
+  font-size: 14px;
+  padding: 1em;
+  font-weight: bold
 }
 
-#prod {
-    padding-right: 10em    
+.product-name{
+  //background-color:#f2f2f2;
+  max-width: 200px;
+
 }
-#product-quantity{
+.product-price{
+  //background-color:#f2f2f2;
+  padding: 1em;
+}
+.product-quantity-input{
     width: 40px;
+    //background-color:#f2f2f2;
+}
+.product-quantity{
+  padding: 1em;
+  //background-color:#f2f2f2;
 }
 
+.product-total{
+  //background-color:#f2f2f2;
+  padding: 1em; 
+}
 mat-card-subtitle{
     color: black;
     font-size: 18px;
+    padding-top: 1em;
 }
 
 * {
@@ -27,21 +51,23 @@ mat-card-subtitle{
   /* Create two equal columns that floats next to each other */
   .item-column {
     float: left;
-    width: 650px;
+    width: 50%; //650px
+    min-width: 420px;
     padding: 10px;
     //height: 300px; /* Should be removed. Only for demonstration */
+    //background-color: red;
   }
   
   /* Create two equal columns that floats next to each other */
   .total-column {
     float: left;
     width: 350px;
-    padding: 10px;
-    background-color:#f2f2f2;
+    padding-left: 1em;
+    //background-color: blue;
+    //background-color:#f2f2f2;
     th{
       font-size: 16px;
     }
-    //height: 300px; /* Should be removed. Only for demonstration */
   }
 
   /* Clear floats after the columns */
