@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ProductService } from '../product.service';
+import { HttpService } from '../http.service';
 
 @Component({
   selector: 'app-home',
@@ -7,7 +8,9 @@ import { ProductService } from '../product.service';
   styleUrls: ['./home.component.scss']
 })
 export class HomeComponent implements OnInit {
-  constructor(private service: ProductService) { }
+  fireUpHeroku: Object;
+
+  constructor(private service: ProductService, private _http: HttpService) { }
   
   customOptions: any = {
     loop: true,
@@ -38,6 +41,10 @@ export class HomeComponent implements OnInit {
   }
   
   ngOnInit() {
+    window.scrollTo(0, 0)
+    this._http.getProducts().subscribe(data => {
+      this.fireUpHeroku = data;
+    });  
   }
 
   catClick(Category: string) {

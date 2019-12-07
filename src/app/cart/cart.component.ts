@@ -31,6 +31,7 @@ export class CartComponent implements OnInit {
   constructor(private _http: HttpService, private service: ProductService) { }
 
   ngOnInit() {
+    window.scrollTo(0, 0);
     this._http.getCartByEmail(this.email).subscribe(data => {
       this.cart = data;
     

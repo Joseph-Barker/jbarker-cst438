@@ -1,32 +1,83 @@
 <header>
-  <div class="container" (resized)="onResized($event)">
-    <a routerLink="/" class="logo">
-      <img src="assets/img/AH_logo.png" height="120" width="120">
-    </a>
-    <ng-template [ngIf]= "width > 590" [ngIfElse]="none">
-      <nav>      
-        <ul>
-          <li><a routerLink="/">Home</a></li>
-          <li><a routerLink="/product-list">Products</a></li>
-          <li><a routerLink="/sign-in">Sign In</a></li>
-          <li><a routerLink="/cart">Cart | <img src="assets/img/cart.png" height="15" width="18"></a></li>
-        </ul>
-      </nav>
-    </ng-template>
-    <ng-template #none>
-        <button mat-icon-button [matMenuTriggerFor]="menu" aria-label="icon-button with a menu" id="burger">
-          <mat-icon><img src="assets/img/burger_icon.png" height="30" width="40"></mat-icon>
-        </button>
-        <mat-menu #menu="matMenu">
-          <button mat-menu-item><a routerLink="/">Home</a></button>
-          <button mat-menu-item><a routerLink="/product-list">Products</a></button>
-          <button mat-menu-item><a routerLink="/sign-in">Sign In</a></button>
-          <button mat-menu-item><a routerLink="/cart">Cart</a></button>
-        </mat-menu>
-    </ng-template>
+  <div class="row" (resized)="onResized($event)">
+    <div class="column">
+      <a routerLink="/" class="logo">
+        <img src="assets/img/AH_logo.png" height="120" width="120">
+      </a>
+    </div>
+    <div id="search-bar" class="column">
+      <mat-form-field appearance="outline">
+        <mat-label>Search</mat-label>
+        <input matInput placeholder="" autocomplete="off">
+        <mat-icon matSuffix>search</mat-icon>
+      </mat-form-field>  
+    </div>
+    <div class="column">
+      <ng-template [ngIf]= "width > 590" [ngIfElse]="none">
+        <nav>      
+          <ul>
+            <li><a routerLink="/">Home</a></li>
+            <li><a routerLink="/product-list">Products</a></li>
+            <li><a routerLink="/sign-in">Sign In</a></li>
+            <li><a routerLink="/cart">Cart | <img src="assets/img/cart.png" height="15" width="18"></a></li>
+          </ul>
+        </nav>
+      </ng-template>
+      <ng-template #none>
+          <button mat-icon-button [matMenuTriggerFor]="menu" aria-label="icon-button with a menu" id="burger">
+            <mat-icon><img src="assets/img/burger_icon.png" height="30" width="40"></mat-icon>
+          </button>
+          <mat-menu #menu="matMenu">
+            <a routerLink="/"><button mat-menu-item>Home</button></a>
+            <a routerLink="/product-list"><button mat-menu-item>Products</button></a>
+            <a routerLink="/sign-in"><button mat-menu-item>Sign In</button></a>
+            <a routerLink="/cart"><button mat-menu-item>Cart</button></a>
+          </mat-menu>
+      </ng-template>
+    </div>
   </div>
 </header>
 
 <div class="container">
   <router-outlet></router-outlet>
 </div>
+
+<footer id="footer">
+  <div class="row">
+    <div id="col1" class="column">
+      <mat-list class="foot-list">
+        <mat-list-item><strong>Customer Service</strong></mat-list-item>
+        <mat-divider></mat-divider>
+        <mat-list-item><a mat-button routerLink="." >Contact Us</a></mat-list-item>
+        <mat-list-item><a mat-button routerLink="." >Product Recalls</a></mat-list-item>
+        <mat-list-item><a mat-button routerLink="." >Track Your Order</a></mat-list-item>
+        <mat-list-item><a mat-button routerLink="." >Easy Returns</a></mat-list-item>
+    </mat-list>
+    </div>
+    <div id="col2" class="column">
+      <mat-list class="foot-list">
+        <mat-list-item><strong>About Angular</strong></mat-list-item>
+        <mat-divider></mat-divider>
+        <mat-list-item><a mat-button routerLink="." >About Angular Hardware</a></mat-list-item>
+        <mat-list-item><a mat-button routerLink="." >Community Involvement</a></mat-list-item>
+        <mat-list-item><a mat-button routerLink="." >Careers</a></mat-list-item>
+        <mat-list-item><a mat-button routerLink="." >Affiliate Program</a></mat-list-item>
+    </mat-list>
+    </div>
+    <div id="col3" class="column">
+      <mat-list class="foot-list">
+        <mat-list-item><strong>Resources</strong></mat-list-item>
+        <mat-divider></mat-divider>
+        <mat-list-item><a mat-button routerLink="." >Specials & Offers</a></mat-list-item>
+        <mat-list-item><a mat-button routerLink="." >DIY Projects & Ideas</a></mat-list-item>
+        <mat-list-item><a mat-button routerLink="." >Protection Plans</a></mat-list-item>
+        <mat-list-item><a mat-button routerLink="." >Gift Cards</a></mat-list-item>
+    </mat-list> 
+    </div>
+  </div>  
+  <div id="fLogo">
+    <a routerLink="/" class="logo-link">
+      <img src="assets/img/AH_logo2.png" height="115" width="115" id="logo2">
+    </a>
+  </div>    
+</footer>

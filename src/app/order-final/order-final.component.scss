@@ -1,5 +1,11 @@
+.truck-card {
+    max-width: 600px;
+    transition: none !important;
+    box-shadow: none !important;
+  }
+
 #final {
-    width: 600px;
+    max-width: 600px;
     height: auto;
     text-align: center;
 }
