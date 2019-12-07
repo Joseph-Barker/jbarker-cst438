@@ -8,20 +8,20 @@ export class HttpService {
   constructor(private http: HttpClient) { }
 
   getProducts() {
-    return this.http.get('http://localhost:8081/products/getAll');
+    return this.http.get('https://jbarker-438-product-service.herokuapp.com/products/getAll');
   }
 
   getProductById(ID: string) {
-    return this.http.get('http://localhost:8081/products/get/' + ID);
+    return this.http.get('https://jbarker-438-product-service.herokuapp.com/products/get/' + ID);
   }
 
   getProductByCat(Category: string) {
-    return this.http.get('http://localhost:8081/products/category/' + Category);
+    return this.http.get('https://jbarker-438-product-service.herokuapp.com/products/category/' + Category);
   }
 
 
   getCartByEmail(Email: string) {
-    return this.http.get('http://localhost:8081/user/cart/{email}?email=' + Email);
+    return this.http.get('https://jbarker-438-product-service.herokuapp.com/user/cart/{email}?email=' + Email);
   }
 
 }

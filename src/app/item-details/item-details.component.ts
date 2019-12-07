@@ -13,6 +13,7 @@ export class ItemDetailsComponent implements OnInit {
   constructor(private _http: HttpService, private service: ProductService) { }
 
   ngOnInit() {
+    window.scrollTo(0, 0);
     if (localStorage.getItem('product') === null) {
       this._http.getProductById(this.service.getProductId()).subscribe(data => {
         this.product = data;

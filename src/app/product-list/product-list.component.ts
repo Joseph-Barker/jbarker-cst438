@@ -34,6 +34,7 @@ export class ProductListComponent implements OnInit {
   constructor(private _http: HttpService, private service: ProductService) { }
 
   ngOnInit() {
+    window.scrollTo(0, 0);
     this.selected = this.service.getCategory();
     
     if (this.service.getCategory() === "All Categories") {
