@@ -24,8 +24,8 @@
         </nav>
       </ng-template>
       <ng-template #none>
-          <button mat-icon-button [matMenuTriggerFor]="menu" aria-label="icon-button with a menu" id="burger">
-            <mat-icon><img src="assets/img/burger_icon.png" height="30" width="40"></mat-icon>
+          <button mat-button [matMenuTriggerFor]="menu" aria-label="icon-button with a menu" id="burger">
+            <mat-icon>menu</mat-icon>
           </button>
           <mat-menu #menu="matMenu">
             <a routerLink="/"><button mat-menu-item>Home</button></a>

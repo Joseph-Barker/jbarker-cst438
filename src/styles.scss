@@ -46,7 +46,12 @@ header {
 
 #burger{
     float: right;
-    padding-left: 2em;
+    height: 0;
+    //padding-left: 2em;
+    .mat-icon {
+        font-size: 3.7em;
+        float: left;
+      }
 }
 
 #cartImg{
